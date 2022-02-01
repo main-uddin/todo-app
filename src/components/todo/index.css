@@ -1,0 +1,45 @@
+/* root  */
+.wrapper {
+  max-width: 500px;
+  margin: 20px auto;
+  /* text-align: center; */
+}
+.wrapper h1 {
+  text-align: center;
+}
+
+/* item css  */
+.item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: grey 0px 0px 2px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.item__text {
+  font-weight: bold;
+  font-size: 20px;
+}
+.item__time {
+  font-size: 14px;
+  color: rgb(136, 135, 121);
+}
+
+/* create form  */
+
+.create__form--wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* update form   */
+
+.update__form {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+}

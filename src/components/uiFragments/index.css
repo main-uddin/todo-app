@@ -1,0 +1,10 @@
+.form__input {
+  border: none;
+  padding: 10px 20px;
+  box-shadow: 0 0 3px rgb(221, 221, 7);
+  border-radius: 5px;
+}
+
+.form__input:focus {
+  outline: none;
+}
