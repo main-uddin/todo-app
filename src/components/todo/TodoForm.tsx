@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-import { addItem, todos } from "../../redux/slice/todoSlice";
+import { addItem } from "../../redux/slice/todoSlice";
 import { Button, Input } from "../uiFragments";
 
 const TodoForm = () => {
