@@ -58,7 +58,7 @@ const Item = ({ item }: ItemProps) => {
           <div>
             <div className="item__text">{item?.text}</div>
             <div className="item__time">
-              {moment(item?.createdAt).format("MMM-D-YY, h:mm:ss a")}
+              {moment(item?.createdAt).format("lll")}
             </div>
           </div>
           <span>
