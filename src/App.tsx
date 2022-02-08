@@ -1,10 +1,16 @@
 import "./App.css";
-import Index from "./components/todo";
+import Todo from "./components/todo";
+import Inprogress from "./components/inprogress";
+import Done from "./components/done";
 
 function App() {
   return (
     <div className="App">
-      <Index />
+      <div className="wrapper">
+        <Todo />
+        <Inprogress />
+        <Done />
+      </div>
     </div>
   );
 }

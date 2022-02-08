@@ -42,6 +42,24 @@ const Item = ({ item }: ItemProps) => {
     dispatch(removeItem({ ...item }));
   };
 
+  const moveToInprogress = () => {
+    const { status, ...rest } = item;
+    const obj = {
+      ...rest,
+      status: "inprogress",
+    };
+    dispatch(updateItem({ ...obj }));
+  };
+
+  const moveToDone = () => {
+    const { status, ...rest } = item;
+    const obj = {
+      ...rest,
+      status: "done",
+    };
+    dispatch(updateItem({ ...obj }));
+  };
+
   return (
     <div>
       {isUpdate && (
@@ -62,6 +80,14 @@ const Item = ({ item }: ItemProps) => {
             </div>
           </div>
           <span>
+            {item?.status !== "done" && (
+              <>
+                {item?.status !== "inprogress" && (
+                  <button onClick={moveToInprogress}>move to inprogress</button>
+                )}
+                <button onClick={moveToDone}>move to done</button>
+              </>
+            )}
             <Button onClick={handleEdit} color="#3A92B6" value="Edit" />
             <Button onClick={handleDelete} color="#DC401F" value="Delete" />
           </span>

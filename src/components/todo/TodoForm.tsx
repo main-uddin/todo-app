@@ -21,6 +21,7 @@ const TodoForm = () => {
       id,
       createdAt,
       text,
+      status: "default",
     };
 
     if (text?.trim()) {

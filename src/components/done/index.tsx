@@ -1,31 +1,31 @@
-import Item from "./Item";
-import TodoForm from "./TodoForm";
-
 import { useSelector } from "react-redux";
 import { todos } from "../../redux/slice/todoSlice";
-import "./index.css";
+import Item from "../todo/Item";
+
 import { TodoItem } from "../../interface";
 
 const Index = () => {
   const todoItems = useSelector(todos);
 
-  console.log(todoItems);
   const sortItems = todoItems
     ?.slice()
+    ?.filter((f) => f.status === "done")
     ?.sort(
       (a: TodoItem, b: TodoItem) =>
         new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
+
   return (
-    <div className="wrapper">
-      <h1>Todo App</h1>
-      <TodoForm />
+    <div>
+      <h1>This is Done</h1>
       {sortItems
-        ?.filter((f) => f.status === "default")
-        .map((item) => (
-          <Item key={item.id} item={item} />
+        ?.map((item) => (
+          <>
+            <Item key={item.id} item={item} />
+          </>
         ))}
     </div>
   );
 };
+
 export default Index;
