@@ -83,9 +83,13 @@ const Item = ({ item }: ItemProps) => {
             {item?.status !== "done" && (
               <>
                 {item?.status !== "inprogress" && (
-                  <button onClick={moveToInprogress}>move to inprogress</button>
+                  <Button
+                    onClick={moveToInprogress}
+                    color="#3A92B6"
+                    value="Inprogress"
+                  />
                 )}
-                <button onClick={moveToDone}>move to done</button>
+                <Button onClick={moveToDone} color="#3A92B6" value="Done" />
               </>
             )}
             <Button onClick={handleEdit} color="#3A92B6" value="Edit" />

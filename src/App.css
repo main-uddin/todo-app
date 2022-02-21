@@ -4,7 +4,13 @@ body {
 }
 
 .wrapper {
-  /* display: flex;
+  display: flex;
   justify-content: space-between;
-  align-items: center; */
+  align-items: center;
+}
+
+.heading--wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }

@@ -1,5 +1,4 @@
 import Item from "./Item";
-import TodoForm from "./TodoForm";
 
 import { useSelector } from "react-redux";
 import { todos } from "../../redux/slice/todoSlice";
@@ -9,7 +8,6 @@ import { TodoItem } from "../../interface";
 const Index = () => {
   const todoItems = useSelector(todos);
 
-  console.log(todoItems);
   const sortItems = todoItems
     ?.slice()
     ?.sort(
@@ -17,9 +15,9 @@ const Index = () => {
         new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
   return (
-    <div className="wrapper">
-      <h1>Todo App</h1>
-      <TodoForm />
+    <div className="todo-wrapper">
+
+      <h1>Default List</h1>
       {sortItems
         ?.filter((f) => f.status === "default")
         .map((item) => (

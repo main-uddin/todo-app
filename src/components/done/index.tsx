@@ -17,13 +17,12 @@ const Index = () => {
 
   return (
     <div>
-      <h1>This is Done</h1>
-      {sortItems
-        ?.map((item) => (
-          <>
-            <Item key={item.id} item={item} />
-          </>
-        ))}
+      <h1>Done</h1>
+      {sortItems?.map((item) => (
+        <>
+          <Item key={item.id} item={item} />
+        </>
+      ))}
     </div>
   );
 };
